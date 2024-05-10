@@ -1,0 +1,29 @@
+<!--<template>-->
+        <!--Lightning card for OpenAI-->
+        <!--<lightning-card title='OpenAI'>
+        <lightning-spinner alternative-text='Loading…' variant='brand' if:true={IsSpinner}>
+        </lightning-spinner>
+        <div class='slds-p-around–small'>
+        {data}
+        <lightning-textarea name='input1' value={question} onchange={handleChange}></lightning-textarea>
+        </div>
+        <div class='slds-align_absolute-center'>
+        <lightning-button variant='brand' label='Ask OpenAI?' title='Query to be sent to OPENAI' onclick={handleClick}
+        class='slds-m-left_x-small'></lightning-button>
+        </div>
+        </lightning-card>
+</template>-->
+<template>
+    <!-- Lightning card for ChatGPT -->
+    <lightning-card title="ChatGPT">
+      <lightning-spinner alternative-text="Loading..." variant="brand" if:true={isLoading}></lightning-spinner>
+      <div class="slds-p-around--small">
+        {chatHistory}
+        <lightning-textarea name="inputMessage" value={userMessage} onchange={handleChange}></lightning-textarea>
+      </div>
+      <div class="slds-align_absolute-center">
+        <lightning-button variant="brand" label="Ask OpenAI?" title="Query to be sent to OPENAI" onclick={sendMessage}></lightning-button>
+      </div>
+    </lightning-card>
+  </template>
+  
